@@ -4,7 +4,6 @@
 // let begin = require('@architect/functions')
 
 let data = require('@begin/data')
-let begin = require('@architect/functions') // Reads & writes session data
 
 exports.handler = async function http(req) {
   console.log(req)
