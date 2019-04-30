@@ -1,13 +1,9 @@
-#
-# Warning! Do Not Edit
-# --------------------
-# This is a generated file and will be overwritten
-#
 @app
-begin-app
+pizza-lmm
 
 @http
 get /
+post /record
 
 @tables
 data
