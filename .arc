@@ -11,9 +11,6 @@ data
   dataID **String
   ttl TTL
 
-foo
-  key *String
-
 sensor
   device *String
   timestamp **Number
