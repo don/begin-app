@@ -3,8 +3,19 @@
 //
 // let begin = require('@architect/functions')
 
+let data = require('@begin/data')
+let begin = require('@architect/functions') // Reads & writes session data
+
 exports.handler = async function http(req) {
   console.log(req)
+
+  let table = 'foo'
+  // let key = 'The Key'
+  // let value = `Some Value`
+  let key = req.body.key
+  let value = req.body.value
+  await data.set({table, key, value})
+
   return {
     status: 302,
     location: '/'

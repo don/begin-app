@@ -1,5 +1,5 @@
 // Add simple, fast, scalable persistence: https://docs.begin.com/en/data/begin-data/
-// let data = require('@begin/data')
+let data = require('@begin/data')
 
 // Add secure sessions, middleware, and more: https://docs.begin.com/en/functions/http/
 // let begin = require('@architect/functions')
@@ -31,9 +31,12 @@ let body = `
 
 exports.handler = async function http(req) {
   console.log(req)
+
+  let table = await data.get({table:'foo'})
+
   return {
     type: 'text/html; charset=utf8',
-    body
+    body: `<pre>${JSON.stringify(table, null, 2)}</pre>`
   }
 }
 

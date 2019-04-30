@@ -10,3 +10,10 @@ data
   scopeID *String
   dataID **String
   ttl TTL
+
+foo
+  key *String
+
+sensor
+  device *String
+  timestamp **Number
