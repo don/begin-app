@@ -32,6 +32,9 @@ let body = `
 exports.handler = async function http(req) {
   console.log(req)
 
+  // shut the linter up
+  body += '';
+
   let table = await data.get({table:'foo'})
 
   return {
